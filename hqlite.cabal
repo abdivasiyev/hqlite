@@ -1,0 +1,29 @@
+cabal-version:      3.14
+name:               hqlite
+version:            0.1.0.0
+-- synopsis:
+-- description:
+homepage:           github.com/abdivasiyev/hqlite
+license:            GPL-3.0-only
+license-file:       LICENSE
+author:             Asliddinbek Azizovich
+maintainer:         asliddin.abdivasiyev@gmail.com
+-- copyright:
+category:           Database
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable hqlite
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Repl.Runner
+    -- other-extensions:
+    build-depends:    base      
+                    , haskeline 
+    hs-source-dirs:   app
+    default-language: GHC2024
+
