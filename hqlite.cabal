@@ -21,9 +21,12 @@ executable hqlite
     import:           warnings
     main-is:          Main.hs
     other-modules:    Repl.Runner
+	                , Parser.Sql
     -- other-extensions:
     build-depends:    base      
+                    , text
                     , haskeline 
+					, megaparsec
     hs-source-dirs:   app
     default-language: GHC2024
 
